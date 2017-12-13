@@ -1,0 +1,9 @@
+
+var http=require('http');
+var fs= require('fs');
+myReadStream=fs.createReadStream('readMe.txt','utf8');
+myReadStream=fs.createReadStream('jsonReadMe.json','utf8');                                                                      
+myReadStream.on('data',function(chunk){
+console.log('New chunk is received:');
+console.log(chunk);
+});
